@@ -175,8 +175,7 @@ class PopuliConnection {
 
   public async getTermStudents(
     termId?: PopuliID,
-    options?: GetTermStudentsOptions,
-    page: number = 1
+    options?: GetTermStudentsOptions
   ) {
     return this.taskRequest(
       'getTermStudents',
@@ -185,7 +184,7 @@ class PopuliConnection {
         program_id: options?.programId,
         campus_id: options?.campusId,
         return_image_data: options?.returnImageData,
-        page,
+        page: options?.page,
       },
       'student'
     );
