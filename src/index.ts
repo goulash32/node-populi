@@ -117,6 +117,25 @@ class PopuliConnection {
     return this.taskRequest('getAcademicYears', {}, 'academic_year');
   }
 
+  public async getAidApplication(aidApplicationId: PopuliID) {
+    return this.taskRequest(
+      'getAidApplication',
+      { aid_application_id: aidApplicationId },
+      'aid_application'
+    );
+  }
+
+  public async getAidApplicationForStudentAidYear(
+    aidApplicationId: PopuliID,
+    aidYearId: PopuliID
+  ) {
+    return this.taskRequest(
+      'getAidApplicationForStudentAidYear',
+      { aid_application_id: aidApplicationId, aid_year_id: aidYearId },
+      'aid_application'
+    );
+  }
+
   public async getAcademicTerms() {
     return this.taskRequest('getAcademicTerms', {}, 'academic_term');
   }
