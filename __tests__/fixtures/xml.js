@@ -43,6 +43,101 @@ module.exports = {
 	</academic_year>
 </response>
   `,
+  getAidApplication: `
+  <?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<aid_application>
+		<id>65</id>
+		<student_id>1000</student_id>
+		<aid_year_id>6</aid_year_id>
+		<aid_year_name>2009-2010</aid_year_name>
+		<assigned_to_id>0</assigned_to_id>
+		<assigned_to_name></assigned_to_name>
+		<dependency></dependency>
+		<student_aid_class_id></student_aid_class_id>
+		<student_aid_class_name></student_aid_class_name>
+		<program_months>9</program_months>
+		<enrollment>FULL_TIME</enrollment>
+		<year_coa>555.55</year_coa>
+		<program_coa>0.00</program_coa>
+		<year_efc>0.00</year_efc>
+		<program_efc>0.00</program_efc>
+		<student_agi>0.00</student_agi>
+		<parents_agi>0.00</parents_agi>
+		<auto_zero_efc>0</auto_zero_efc>
+		<fisap_total_income>0.00</fisap_total_income>
+		<legal_residence_state></legal_residence_state>
+		<need>0</need>
+		<housing></housing>
+		<status>SETUP</status>
+		<verification>SELECTED_BY_GOVERNMENT</verification>
+		<verification_status>IN_PROGRESS</verification_status>
+		<verification_group></verification_group>
+		<verification_exempt_reason></verification_exempt_reason>
+		<added_by_id>1257</added_by_id>
+		<added_at>2014-12-17 10:47:56</added_at>
+		<last_isir_id>1234</last_isir_id>
+		<isir_veteran/>
+	</aid_application>
+</response>
+  `,
+  getAidApplicationForStudentAidYear: `
+  <?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<aid_application>
+		<id>65</id>
+		<student_id>1000</student_id>
+		<aid_year_id>6</aid_year_id>
+		<aid_year_name>2009-2010</aid_year_name>
+		<assigned_to_id>0</assigned_to_id>
+		<assigned_to_name></assigned_to_name>
+		<dependency></dependency>
+		<student_aid_class_id></student_aid_class_id>
+		<student_aid_class_name></student_aid_class_name>
+		<program_months>9</program_months>
+		<enrollment>FULL_TIME</enrollment>
+		<year_coa>555.55</year_coa>
+		<program_coa>0.00</program_coa>
+		<year_efc>0.00</year_efc>
+		<program_efc>0.00</program_efc>
+		<student_agi>0.00</student_agi>
+		<parents_agi>0.00</parents_agi>
+		<auto_zero_efc>0</auto_zero_efc>
+		<fisap_total_income>0.00</fisap_total_income>
+		<legal_residence_state></legal_residence_state>
+		<need>0</need>
+		<housing></housing>
+		<status>SETUP</status>
+		<verification>SELECTED_BY_GOVERNMENT</verification>
+		<verification_status>IN_PROGRESS</verification_status>
+		<verification_group></verification_group>
+		<verification_exempt_reason></verification_exempt_reason>
+		<added_by_id>1257</added_by_id>
+		<added_at>2014-12-17 10:47:56</added_at>
+		<last_isir_id>1234</last_isir_id>
+		<isir_veteran/>
+	</aid_application>
+</response>
+  `,
+  getAllCustomFields: `
+  <?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<custom_field>
+		<id>111</id>
+		<name>Dorm Preference</name>
+		<description>Quickly deliver enterprise-wide best practices rather than cross-media vortals. Enthusiastically predominate goal-oriented process improvements after fully tested niches. Globally fabricate ubiquitous content after synergistic web-readiness.</description>
+		<type>STUDENT</type>
+		<input_type>SELECT</input_type>
+	</custom_field>
+	<custom_field>
+		<id>555</id>
+		<name>Number of Previous Colleges Attended</name>
+		<description>Collaboratively leverage other's mission-critical networks before accurate processes. Competently deliver multidisciplinary information before B2C intellectual capital.	Phosfluorescently embrace sticky outsourcing without cross-unit customer service.</description>
+		<type>ADMISSIONS</type>
+		<input_type>INTEGER</input_type>
+	</custom_field>
+</response>
+  `,
   getTermStudents: `<?xml version="1.0" encoding="UTF-8"?>
   <response num_results="265">
     <student>
