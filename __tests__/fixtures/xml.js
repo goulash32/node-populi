@@ -138,6 +138,31 @@ module.exports = {
 	</custom_field>
 </response>
   `,
+  getAppeals: `
+  <?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<appeal>
+		<id>3009</id>
+		<name>Email Blast #1</name>
+		<campaign_id>53</campaign_id>
+		<appeal_medium_id>7</appeal_medium_id>
+		<appeal_medium_name>Email</appeal_medium_name>
+		<made_on>Mar 1, 2018</made_on>
+		<cost>100</cost>
+		<status>INACTIVE</status>
+	</appeal>
+	<appeal>
+		<id>3094</id>
+		<name>Cold call push</name>
+		<campaign_id>54</campaign_id>
+		<appeal_medium_id>8</appeal_medium_id>
+		<appeal_medium_name>Callcenter</appeal_medium_name>
+		<made_on>Jan 1, 2019</made_on>
+		<cost>600</cost>
+		<status>ACTIVE</status>
+	</appeal>
+</response>
+  `,
   getTermStudents: `<?xml version="1.0" encoding="UTF-8"?>
   <response num_results="265">
     <student>

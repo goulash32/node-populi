@@ -140,6 +140,10 @@ class PopuliConnection {
     return this.taskRequest('getAcademicTerms', {}, 'academic_term');
   }
 
+  public async getAppeals() {
+    return this.taskRequest('getAppeals', {}, 'appeal');
+  }
+
   public async getCountries() {
     return (await this.taskRequest('getCountries', {}, 'countries')).country;
   }

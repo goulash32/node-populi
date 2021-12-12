@@ -69,6 +69,17 @@ describe('gets aid application for student aid year', () => {
   });
 });
 
+describe('gets all appeals', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(require('./fixtures/xml').getAppeals);
+  });
+
+  test('getAppeals()', async () => {
+    const appeals = await pc.getAppeals();
+    expect(appeals).toHaveLength(2);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(
