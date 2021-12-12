@@ -34,6 +34,19 @@ export type Address = {
   public?: boolean;
 };
 
+export type CustomFieldsType =
+  | 'ALL'
+  | 'PERSON'
+  | 'STUDENT'
+  | 'TERM_STUDENT'
+  | 'ADMISSIONS'
+  | 'CAMPUS_LIFE'
+  | 'FINANCIAL'
+  | 'FINANCIAL_AID'
+  | 'DONATION'
+  | 'DONOR'
+  | 'ORGANIZATION';
+
 export type GetTermStudentsOptions = {
   programId?: PopuliID;
   campusId?: PopuliID;

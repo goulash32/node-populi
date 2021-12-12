@@ -7,6 +7,7 @@ import {
   Address,
   GetTermStudentsOptions,
   PopuliError,
+  CustomFieldsType,
 } from './types';
 
 type PopuliConnectionInfo = {
@@ -163,6 +164,10 @@ class PopuliConnection {
       { instance_id: instanceId },
       ''
     );
+  }
+
+  public async getAllCustomFields(type?: CustomFieldsType) {
+    return this.taskRequest('getAllCustomFields', { type }, 'custom_field');
   }
 
   public async getTermCourseInstances(termId: PopuliID) {
