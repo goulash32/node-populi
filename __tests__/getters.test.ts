@@ -1,4 +1,4 @@
-import { PopuliConnection } from '../';
+import { PopuliConnection } from '../dist';
 
 jest.mock('node-fetch');
 
@@ -39,6 +39,46 @@ describe('gets all academic years', () => {
   test('getAcademicYears()', async () => {
     const academicYears = await pc.getAcademicYears();
     expect(academicYears).toHaveLength(2);
+  });
+});
+
+describe('gets aid application', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getAidApplication
+    );
+  });
+
+  test('getAidApplication()', async () => {
+    const aidApplication = await pc.getAidApplication(65);
+    expect(aidApplication.id).toBe(65);
+  });
+});
+
+describe('gets aid application for student aid year', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getAidApplicationForStudentAidYear
+    );
+  });
+
+  test('getAidApplicationForStudentAidYear()', async () => {
+    const aidApplication = await pc.getAidApplicationForStudentAidYear(65, 6);
+    expect(aidApplication.id).toBe(65);
+    expect(aidApplication.aidYearId).toBe(6);
+  });
+});
+
+describe('gets all custom fields', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getAllCustomFields
+    );
+  });
+
+  test('getAllCustomFields()', async () => {
+    const customFields = await pc.getAllCustomFields();
+    expect(customFields).toHaveLength(2);
   });
 });
 
