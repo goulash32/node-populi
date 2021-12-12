@@ -1,0 +1,36 @@
+{
+  "name": "populi-node",
+  "version": "0.0.1",
+  "description": "A Populi API wrapper for NodeJS",
+  "main": "dist/index.js",
+  "author": "Hunter Mueller",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "tsc && node-minify --compressor terser --option \"{ \\\"mangle\\\": false }\" --input dist/index.js --output dist/index.js",
+    "start": "node ./dist/index-min.js"
+  },
+  "devDependencies": {
+    "@node-minify/babel-minify": "^6.2.0",
+    "@node-minify/cli": "^6.2.0",
+    "@node-minify/terser": "^6.2.0",
+    "@types/form-data": "^2.5.0",
+    "@types/istanbul": "^0.4.30",
+    "@types/istanbul-lib-coverage": "^2.0.3",
+    "@types/jest": "^27.0.3",
+    "@types/node-fetch": "^3.0.3",
+    "@types/prettier": "^2.4.2",
+    "@types/xml2js": "^0.4.9",
+    "gnomon": "^1.5.0",
+    "jest": "^27.4.4",
+    "ts-jest": "^27.1.1",
+    "typedoc": "^0.22.10",
+    "typescript": "^4.5.3"
+  },
+  "dependencies": {
+    "camelcase": "^6.2.1",
+    "node-fetch": "2",
+    "typedoc-plugin-missing-exports": "^0.22.6",
+    "xml2js": "^0.4.23"
+  }
+}
