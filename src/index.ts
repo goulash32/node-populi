@@ -144,6 +144,14 @@ class PopuliConnection {
     return this.taskRequest('getAppeals', {}, 'appeal');
   }
 
+  public async getApplication(applicationId: PopuliID) {
+    return this.taskRequest(
+      'getApplication',
+      { application_id: applicationId },
+      'application'
+    );
+  }
+
   public async getCountries() {
     return (await this.taskRequest('getCountries', {}, 'countries')).country;
   }

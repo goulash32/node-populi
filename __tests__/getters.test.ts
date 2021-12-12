@@ -80,6 +80,19 @@ describe('gets all appeals', () => {
   });
 });
 
+describe('gets an application', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getApplication
+    );
+  });
+
+  test('getApplication()', async () => {
+    const application = await pc.getApplication(54321);
+    expect(application.id).toBe(54321);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(
