@@ -775,6 +775,21 @@ module.exports = {
 	</room>
 </response>
 	`,
+  getCampuses: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<campus>
+		<id>146873</id>
+		<name>Main Campus</name>
+		<status>ACTIVE</status>
+		<city>Moscow</city>
+		<state>AZ</state>
+		<zip>12345</zip>
+		<country>US</country>
+		<is_primary>1</is_primary>
+	</campus>
+</response>
+	`,
   getTermStudents: `<?xml version="1.0" encoding="UTF-8"?>
   <response num_results="265">
     <student>

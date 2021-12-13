@@ -218,6 +218,19 @@ describe('gets campus life rooms', () => {
   });
 });
 
+describe('gets all campuses', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getCampuses
+    );
+  });
+
+  test('getCampuses()', async () => {
+    const campuses = await pc.getCampuses();
+    expect(campuses[0].id).toBe(146873);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(

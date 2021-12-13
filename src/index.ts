@@ -257,6 +257,10 @@ class PopuliConnection {
     );
   }
 
+  public async getCampuses() {
+    return this.taskRequest('getCampuses', {}, 'campus', true);
+  }
+
   }
 
   public async getCountries() {
