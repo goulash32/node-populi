@@ -1,7 +1,7 @@
 {
-  "name": "populi-node",
+  "name": "node-populi",
   "version": "0.0.1",
-  "description": "A Populi API wrapper for NodeJS",
+  "description": "A NodeJS wrapper for the Populi (college management system) API",
   "main": "dist/index.js",
   "author": "Hunter Mueller",
   "license": "MIT",
