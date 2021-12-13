@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "tsc && node-minify --compressor terser --option \"{ \\\"mangle\\\": false }\" --input dist/index.js --output dist/index.js && yarn test",
+    "build": "tsc && node-minify --compressor terser --option \"{ \\\"mangle\\\": false }\" --input dist/index.js --output dist/index.js",
     "test": "jest",
     "start": "node ./dist/index.js"
   },
