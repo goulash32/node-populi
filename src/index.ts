@@ -228,11 +228,7 @@ class PopuliConnection {
   }
 
   public async getCourseInstance(instanceId: PopuliID) {
-    return this.taskRequest(
-      'getCourseInstance',
-      { instance_id: instanceId },
-      ''
-    );
+    return this.taskRequest('getCourseInstance', { instance_id: instanceId });
   }
 
   public async getAllCustomFields(type?: CustomFieldsType) {
