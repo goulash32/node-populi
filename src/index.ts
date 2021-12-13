@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 import xml2js from 'xml2js';
 import camelCase from 'camelcase';
 
-import {toPopuliBoolean, toPopuliDate} from './helpers';
+import { toPopuliBoolean, toPopuliDate } from './helpers';
 
 import {
   PopuliID,
