@@ -180,6 +180,16 @@ class PopuliConnection {
     );
   }
 
+  public async getApplicationTemplates(showOnlineOnly: boolean = false) {
+    return this.taskRequest(
+      'getApplicationTemplates',
+      {
+        show_online_only: showOnlineOnly,
+      },
+      'application_template'
+    );
+  }
+
   public async getCountries() {
     return (await this.taskRequest('getCountries', {}, 'countries')).country;
   }

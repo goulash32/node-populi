@@ -119,6 +119,19 @@ describe('gets application fields', () => {
   });
 });
 
+describe('gets application templates', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getApplicationTemplates
+    );
+  });
+
+  test('getApplicationTemplates()', async () => {
+    const options = await pc.getApplicationTemplates(54321);
+    expect(options).toHaveLength(2);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(
