@@ -261,6 +261,10 @@ class PopuliConnection {
     return this.taskRequest('getCampuses', {}, 'campus', true);
   }
 
+  public async getCatalogCourse(catalogCourseId: PopuliID) {
+    return this.taskRequest('getCatalogCourse', {
+      catalog_course_id: catalogCourseId,
+    });
   }
 
   public async getCountries() {

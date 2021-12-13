@@ -790,6 +790,84 @@ module.exports = {
 	</campus>
 </response>
 	`,
+  getCatalogCourse: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<id>11111</id>
+	<name>Advanced Writing: The Novel</name>
+	<abbrv>ENG400</abbrv>
+	<description>You'd want to take ENG400 because...</description>
+	<credits>3.00</credits>
+	<hours>0.00</hours>
+	<status>ACTIVE</status>
+	<department_id>1</department_id>
+	<department_name>Humanities</department_name>
+	<programs>
+		<program>
+			<id>2222</id>
+			<name>Undergraduate</name>
+		</program>
+		<program>
+			<id>3333</id>
+			<name>Registered Nursing</name>
+		</program>
+	</programs>
+	<course_equivalencies>
+		<course_equivalency>
+			<catalog_course_id>159878</catalog_course_id>
+			<abbreviation>LIT400</abbreviation>
+			<name>Senior Literature</name>
+		</course_equivalency>
+	</course_equivalencies>
+	<course_prerequisites>
+		<course_prerequisite>
+			<catalog_course_id>179423</catalog_course_id>
+			<abbreviation>ENG300</abbreviation>
+			<name>Intermediate Writing</name>
+			<may_be_taken_concurrently>0</may_be_taken_concurrently>
+			<minimum_course_grade_points>3.00</minimum_course_grade_points>
+		</course_prerequisite>
+	</course_prerequisites>
+	<course_group_prerequisites>
+		<course_group_prerequisite>
+			<course_group_id>187480</course_group_id>
+			<name>English</name>
+			<courses_required>English</courses_required>
+			<may_be_taken_concurrently>1</may_be_taken_concurrently>
+			<minimum_course_grade_points>3.00</minimum_course_grade_points>
+		</course_group_prerequisite>
+	</course_group_prerequisites>
+	<program_prerequisites>
+		<program_prerequisite>
+			<program_id>2222</program_id>
+			<name>Undergraduate</name>
+		</program_prerequisite>
+	</program_prerequisites>
+	<degree_prerequisites>
+		<degree_prerequisite>
+			<degree_id>444</degree_id>
+			<abbreviation>B.A.</abbreviation>
+			<name>Bachelor of Arts</name>
+		</degree_prerequisite>
+	</degree_prerequisites>
+	<specialization_prerequisites>
+		<specialization_prerequisite>
+			<specialization_id>5555</specialization_id>
+			<abbreviation>ENG</abbreviation>
+			<name>English</name>
+		</specialization_prerequisite>
+	</specialization_prerequisites>
+	<unit_prerequisite>90.00</unit_prerequisite>
+	<other_prerequisite>Other requirements include...</other_prerequisite>
+	<corequisites>
+		<corequisite>
+			<catalog_course_id>1597456</catalog_course_id>
+			<abbreviation>ENG401</abbreviation>
+			<name>Advanced Writing: Composition</name>
+		</corequisite>
+	</corequisites>
+</response>
+	`,
   getTermStudents: `<?xml version="1.0" encoding="UTF-8"?>
   <response num_results="265">
     <student>

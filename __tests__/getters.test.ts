@@ -231,6 +231,19 @@ describe('gets all campuses', () => {
   });
 });
 
+describe('gets catalog course by id', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getCatalogCourse
+    );
+  });
+
+  test('getCatalogCourse()', async () => {
+    const catalogCourse = await pc.getCatalogCourse(11111);
+    expect(catalogCourse.id).toBe(11111);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(
