@@ -47,7 +47,7 @@ export type CustomFieldsType =
   | 'DONOR'
   | 'ORGANIZATION';
 
-export type GetTermStudentsOptions = {
+export type GetTermStudentsParams = {
   programId?: PopuliID;
   campusId?: PopuliID;
   returnImageData?: boolean;

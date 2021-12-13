@@ -5,7 +5,7 @@ import camelCase from 'camelcase';
 import {
   PopuliID,
   Address,
-  GetTermStudentsOptions,
+  GetTermStudentsParams,
   PopuliError,
   CustomFieldsType,
 } from './types';
@@ -211,16 +211,16 @@ class PopuliConnection {
 
   public async getTermStudents(
     termId?: PopuliID,
-    options?: GetTermStudentsOptions
+    params?: GetTermStudentsParams
   ) {
     return this.taskRequest(
       'getTermStudents',
       {
         term_id: termId,
-        program_id: options?.programId,
-        campus_id: options?.campusId,
-        return_image_data: options?.returnImageData,
-        page: options?.page,
+        program_id: params?.programId,
+        campus_id: params?.campusId,
+        return_image_data: params?.returnImageData,
+        page: params?.page,
       },
       'student'
     );
