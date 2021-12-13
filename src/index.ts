@@ -170,6 +170,16 @@ class PopuliConnection {
     return fieldOptions.option;
   }
 
+  public async getApplicationFields(applicationId: PopuliID) {
+    return this.taskRequest(
+      'getApplicationFields',
+      {
+        application_id: applicationId,
+      },
+      'field'
+    );
+  }
+
   public async getCountries() {
     return (await this.taskRequest('getCountries', {}, 'countries')).country;
   }

@@ -146,6 +146,35 @@ module.exports = {
 	</application_field_options>
 </response>
 	`,
+  getApplicationFields: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<field>
+		<id>1111</id>
+		<application_template_field_id>20</application_template_field_id>
+		<name>Educational History</name>
+		<description></description>
+		<received_date>2008-04-15</received_date>
+		<status>ACCEPTED</status>
+	</field>
+	<field>
+		<id>1112</id>
+		<application_template_field_id>21</application_template_field_id>
+		<name>Please write us a 5-10 page essay on the topic of your choice.</name>
+		<description></description>
+		<received_date>2008-04-15</received_date>
+		<status>ACCEPTED</status>
+	</field>
+	<field>
+		<id>1113</id>
+		<application_template_field_id>22</application_template_field_id>
+		<name>Letter of Recommendation</name>
+		<description></description>
+		<received_date>2008-04-15</received_date>
+		<status>ACCEPTED</status>
+	</field>
+</response>
+	`,
   getAllCustomFields: `
   <?xml version="1.0" encoding="UTF-8"?>
 <response>
