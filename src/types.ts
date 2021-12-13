@@ -53,3 +53,8 @@ export type GetTermStudentsParams = {
   returnImageData?: boolean;
   page?: number;
 };
+
+export type GetApplicationFieldOptionsParams = {
+  country?: string;
+  degreeId?: PopuliID;
+};

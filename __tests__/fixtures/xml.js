@@ -119,6 +119,33 @@ module.exports = {
 	</aid_application>
 </response>
   `,
+  getApplicationFieldOptions: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<application_field_options>
+		<option>
+			<id>528</id>
+			<name>Baseball</name>
+		</option>
+		<option>
+			<id>537</id>
+			<name>Softball</name>
+		</option>
+		<option>
+			<id>527</id>
+			<name>Football</name>
+		</option>
+		<option>
+			<id>529</id>
+			<name>Soccer</name>
+		</option>
+		<option>
+			<id>536</id>
+			<name>Tennis</name>
+		</option>
+	</application_field_options>
+</response>
+	`,
   getAllCustomFields: `
   <?xml version="1.0" encoding="UTF-8"?>
 <response>

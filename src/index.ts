@@ -8,6 +8,7 @@ import {
   GetTermStudentsParams,
   PopuliError,
   CustomFieldsType,
+  GetApplicationFieldOptionsParams,
 } from './types';
 
 type PopuliConnectionInfo = {
@@ -150,6 +151,23 @@ class PopuliConnection {
       { application_id: applicationId },
       'application'
     );
+  }
+
+  public async getApplicationFieldOptions(
+    applicationFieldId: PopuliID,
+    params?: GetApplicationFieldOptionsParams
+  ) {
+    const fieldOptions = await this.taskRequest(
+      'getApplicationFieldOptions',
+      {
+        application_field_id: applicationFieldId,
+        country: params?.country,
+        degree_id: params?.degreeId,
+      },
+      'application_field_options'
+    );
+
+    return fieldOptions.option;
   }
 
   public async getCountries() {

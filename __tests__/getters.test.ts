@@ -93,6 +93,19 @@ describe('gets an application', () => {
   });
 });
 
+describe('gets application field options', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getApplicationFieldOptions
+    );
+  });
+
+  test('getApplicationFieldOptions()', async () => {
+    const options = await pc.getApplicationFieldOptions(54321);
+    expect(options).toHaveLength(5);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(
