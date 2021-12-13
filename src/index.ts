@@ -226,7 +226,7 @@ class PopuliConnection {
     return this.taskRequest(
       'getAssignmentComments',
       {
-      assignment_id: assignmentId,
+        assignment_id: assignmentId,
         person_id: personId,
       },
       'comment'
