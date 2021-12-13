@@ -119,209 +119,7 @@ module.exports = {
 	</aid_application>
 </response>
   `,
-  getApplicationFieldOptions: `
-	<?xml version="1.0" encoding="UTF-8"?>
-<response>
-	<application_field_options>
-		<option>
-			<id>528</id>
-			<name>Baseball</name>
-		</option>
-		<option>
-			<id>537</id>
-			<name>Softball</name>
-		</option>
-		<option>
-			<id>527</id>
-			<name>Football</name>
-		</option>
-		<option>
-			<id>529</id>
-			<name>Soccer</name>
-		</option>
-		<option>
-			<id>536</id>
-			<name>Tennis</name>
-		</option>
-	</application_field_options>
-</response>
-	`,
-  getApplicationFields: `
-	<?xml version="1.0" encoding="UTF-8"?>
-<response>
-	<field>
-		<id>1111</id>
-		<application_template_field_id>20</application_template_field_id>
-		<name>Educational History</name>
-		<description></description>
-		<received_date>2008-04-15</received_date>
-		<status>ACCEPTED</status>
-	</field>
-	<field>
-		<id>1112</id>
-		<application_template_field_id>21</application_template_field_id>
-		<name>Please write us a 5-10 page essay on the topic of your choice.</name>
-		<description></description>
-		<received_date>2008-04-15</received_date>
-		<status>ACCEPTED</status>
-	</field>
-	<field>
-		<id>1113</id>
-		<application_template_field_id>22</application_template_field_id>
-		<name>Letter of Recommendation</name>
-		<description></description>
-		<received_date>2008-04-15</received_date>
-		<status>ACCEPTED</status>
-	</field>
-</response>
-	`,
-  getApplicationTemplates: `
-	<?xml version="1.0" encoding="UTF-8"?>
-<response>
-	<application_template>
-		<id>112</id>
-		<name>Basic</name>
-		<show_online>0</show_online>
-		<fee_amount></fee_amount>
-		<fee_payment>BEFORE_START</fee_payment>
-		<allow_undecided>1</allow_undecided>
-	</application_template>
-	<application_template>
-		<id>114</id>
-		<name>Standard</name>
-		<show_online>1</show_online>
-		<fee_amount>50</fee_amount>
-		<fee_payment>BEFORE_START</fee_payment>
-		<allow_undecided>1</allow_undecided>
-		<programs>
-			<program>
-				<id>26</id>
-				<name>Undergraduate</name>
-			</program>
-			<program>
-				<id>27</id>
-				<name>Graduate</name>
-			</program>
-		</programs>
-		<academic_terms>
-			<academic_term>
-				<id>194</id>
-				<name>2015-2016: Spring</name>
-			</academic_term>
-			<academic_term>
-				<id>189</id>
-				<name>2015-2016: Winter</name>
-			</academic_term>
-			<academic_term>
-				<id>190</id>
-				<name>2015-2016: Fall</name>
-			</academic_term>
-		</academic_terms>
-		<enrollment_options>
-			<enrollment_option>FULL_TIME</enrollment_option>
-			<enrollment_option>HALF_TIME</enrollment_option>
-			<enrollment_option>LESS_THAN_HALF_TIME</enrollment_option>
-		</enrollment_options>
-	</application_template>
-</response>
-	`,
-  getApplications: `
-	<?xml version="1.0" encoding="UTF-8"?>
-<response num_results="356">
-	<application>
-		<id>54321</id>
-		<lead_id>3214</lead_id>
-		<lead_active>1</lead_active>
-		<lead_status>ACCEPTED</lead_status>
-		<person_id>1234</person_id>
-		<first_name>Carl</first_name>
-		<preferred_name></preferred_name>
-		<middle_name>Allen</middle_name>
-		<last_name>Michaelson</last_name>
-		<gender>MALE</gender>
-		<email>carl@email.org</email>
-		<application_template_id>112</application_template_id>
-		<application_template_name>Basic</application_template_name>
-		<representative_id>2068</representative_id>
-		<program_id>333</program_id>
-		<program_name>Undergraduate</program_name>
-		<degree_seeking>1</degree_seeking>
-		<degree_id>444</degree_id>
-		<degree_abbreviation>B.A.</degree_abbreviation>
-		<degree_name>Bachelor of Arts</degree_name>
-		<specialization_id>5555</specialization_id>
-		<specialization_abbreviation>ENG</specialization_abbreviation>
-		<specialization_name>English</specialization_name>
-		<academic_term_id>7769</academic_term_id>
-		<academic_term_name>2014-2015: Fall</academic_term_name>
-		<expected_enrollment>FULL_TIME</expected_enrollment>
-		<full_time>1</full_time>
-		<started_on>2014-02-07</started_on>
-		<submitted_at></submitted_at>
-		<decision_on></decision_on>
-		<withdrawn_on></withdrawn_on>
-		<submitted_type>ONLINE</submitted_type>
-		<provisional>0</provisional>
-		<provisional_comment></provisional_comment>
-		<fee_status>PAID</fee_status>
-		<fee_id>8467</fee_id>
-		<fee_amount>25.00</fee_amount>
-		<fee_payment>BEFORE_START</fee_payment>
-		<sales_receipt_id>12365789</sales_receipt_id>
-		<transaction_id>549873215</transaction_id>
-		<applicant_activity_at>2014-02-10 15:46:35</applicant_activity_at>
-		<num_days_since_last_activity>3</num_days_since_last_activity>
-		<staff_activity_at>2014-02-10 16:10:45</staff_activity_at>
-		<percent_completed>95</percent_completed>
-		<status>IN_PROGRESS</status>
-	</application>
-</response>
-	`,
-  getAllCustomFields: `
-  <?xml version="1.0" encoding="UTF-8"?>
-<response>
-	<custom_field>
-		<id>111</id>
-		<name>Dorm Preference</name>
-		<description>Quickly deliver enterprise-wide best practices rather than cross-media vortals. Enthusiastically predominate goal-oriented process improvements after fully tested niches. Globally fabricate ubiquitous content after synergistic web-readiness.</description>
-		<type>STUDENT</type>
-		<input_type>SELECT</input_type>
-	</custom_field>
-	<custom_field>
-		<id>555</id>
-		<name>Number of Previous Colleges Attended</name>
-		<description>Collaboratively leverage other's mission-critical networks before accurate processes. Competently deliver multidisciplinary information before B2C intellectual capital.	Phosfluorescently embrace sticky outsourcing without cross-unit customer service.</description>
-		<type>ADMISSIONS</type>
-		<input_type>INTEGER</input_type>
-	</custom_field>
-</response>
-  `,
-  getAppeals: `
-  <?xml version="1.0" encoding="UTF-8"?>
-<response>
-	<appeal>
-		<id>3009</id>
-		<name>Email Blast #1</name>
-		<campaign_id>53</campaign_id>
-		<appeal_medium_id>7</appeal_medium_id>
-		<appeal_medium_name>Email</appeal_medium_name>
-		<made_on>Mar 1, 2018</made_on>
-		<cost>100</cost>
-		<status>INACTIVE</status>
-	</appeal>
-	<appeal>
-		<id>3094</id>
-		<name>Cold call push</name>
-		<campaign_id>54</campaign_id>
-		<appeal_medium_id>8</appeal_medium_id>
-		<appeal_medium_name>Callcenter</appeal_medium_name>
-		<made_on>Jan 1, 2019</made_on>
-		<cost>600</cost>
-		<status>ACTIVE</status>
-	</appeal>
-</response>
-  `,
-  getApplication: `
+	getApplication: `
   <?xml version="1.0" encoding="UTF-8"?>
 <response>
 	<application>
@@ -658,6 +456,208 @@ module.exports = {
 			</note>
 		</notes>
 	</application>
+</response>
+  `,
+  getApplicationFieldOptions: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<application_field_options>
+		<option>
+			<id>528</id>
+			<name>Baseball</name>
+		</option>
+		<option>
+			<id>537</id>
+			<name>Softball</name>
+		</option>
+		<option>
+			<id>527</id>
+			<name>Football</name>
+		</option>
+		<option>
+			<id>529</id>
+			<name>Soccer</name>
+		</option>
+		<option>
+			<id>536</id>
+			<name>Tennis</name>
+		</option>
+	</application_field_options>
+</response>
+	`,
+  getApplicationFields: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<field>
+		<id>1111</id>
+		<application_template_field_id>20</application_template_field_id>
+		<name>Educational History</name>
+		<description></description>
+		<received_date>2008-04-15</received_date>
+		<status>ACCEPTED</status>
+	</field>
+	<field>
+		<id>1112</id>
+		<application_template_field_id>21</application_template_field_id>
+		<name>Please write us a 5-10 page essay on the topic of your choice.</name>
+		<description></description>
+		<received_date>2008-04-15</received_date>
+		<status>ACCEPTED</status>
+	</field>
+	<field>
+		<id>1113</id>
+		<application_template_field_id>22</application_template_field_id>
+		<name>Letter of Recommendation</name>
+		<description></description>
+		<received_date>2008-04-15</received_date>
+		<status>ACCEPTED</status>
+	</field>
+</response>
+	`,
+  getApplicationTemplates: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<application_template>
+		<id>112</id>
+		<name>Basic</name>
+		<show_online>0</show_online>
+		<fee_amount></fee_amount>
+		<fee_payment>BEFORE_START</fee_payment>
+		<allow_undecided>1</allow_undecided>
+	</application_template>
+	<application_template>
+		<id>114</id>
+		<name>Standard</name>
+		<show_online>1</show_online>
+		<fee_amount>50</fee_amount>
+		<fee_payment>BEFORE_START</fee_payment>
+		<allow_undecided>1</allow_undecided>
+		<programs>
+			<program>
+				<id>26</id>
+				<name>Undergraduate</name>
+			</program>
+			<program>
+				<id>27</id>
+				<name>Graduate</name>
+			</program>
+		</programs>
+		<academic_terms>
+			<academic_term>
+				<id>194</id>
+				<name>2015-2016: Spring</name>
+			</academic_term>
+			<academic_term>
+				<id>189</id>
+				<name>2015-2016: Winter</name>
+			</academic_term>
+			<academic_term>
+				<id>190</id>
+				<name>2015-2016: Fall</name>
+			</academic_term>
+		</academic_terms>
+		<enrollment_options>
+			<enrollment_option>FULL_TIME</enrollment_option>
+			<enrollment_option>HALF_TIME</enrollment_option>
+			<enrollment_option>LESS_THAN_HALF_TIME</enrollment_option>
+		</enrollment_options>
+	</application_template>
+</response>
+	`,
+  getApplications: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response num_results="356">
+	<application>
+		<id>54321</id>
+		<lead_id>3214</lead_id>
+		<lead_active>1</lead_active>
+		<lead_status>ACCEPTED</lead_status>
+		<person_id>1234</person_id>
+		<first_name>Carl</first_name>
+		<preferred_name></preferred_name>
+		<middle_name>Allen</middle_name>
+		<last_name>Michaelson</last_name>
+		<gender>MALE</gender>
+		<email>carl@email.org</email>
+		<application_template_id>112</application_template_id>
+		<application_template_name>Basic</application_template_name>
+		<representative_id>2068</representative_id>
+		<program_id>333</program_id>
+		<program_name>Undergraduate</program_name>
+		<degree_seeking>1</degree_seeking>
+		<degree_id>444</degree_id>
+		<degree_abbreviation>B.A.</degree_abbreviation>
+		<degree_name>Bachelor of Arts</degree_name>
+		<specialization_id>5555</specialization_id>
+		<specialization_abbreviation>ENG</specialization_abbreviation>
+		<specialization_name>English</specialization_name>
+		<academic_term_id>7769</academic_term_id>
+		<academic_term_name>2014-2015: Fall</academic_term_name>
+		<expected_enrollment>FULL_TIME</expected_enrollment>
+		<full_time>1</full_time>
+		<started_on>2014-02-07</started_on>
+		<submitted_at></submitted_at>
+		<decision_on></decision_on>
+		<withdrawn_on></withdrawn_on>
+		<submitted_type>ONLINE</submitted_type>
+		<provisional>0</provisional>
+		<provisional_comment></provisional_comment>
+		<fee_status>PAID</fee_status>
+		<fee_id>8467</fee_id>
+		<fee_amount>25.00</fee_amount>
+		<fee_payment>BEFORE_START</fee_payment>
+		<sales_receipt_id>12365789</sales_receipt_id>
+		<transaction_id>549873215</transaction_id>
+		<applicant_activity_at>2014-02-10 15:46:35</applicant_activity_at>
+		<num_days_since_last_activity>3</num_days_since_last_activity>
+		<staff_activity_at>2014-02-10 16:10:45</staff_activity_at>
+		<percent_completed>95</percent_completed>
+		<status>IN_PROGRESS</status>
+	</application>
+</response>
+	`,
+  getAllCustomFields: `
+  <?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<custom_field>
+		<id>111</id>
+		<name>Dorm Preference</name>
+		<description>Quickly deliver enterprise-wide best practices rather than cross-media vortals. Enthusiastically predominate goal-oriented process improvements after fully tested niches. Globally fabricate ubiquitous content after synergistic web-readiness.</description>
+		<type>STUDENT</type>
+		<input_type>SELECT</input_type>
+	</custom_field>
+	<custom_field>
+		<id>555</id>
+		<name>Number of Previous Colleges Attended</name>
+		<description>Collaboratively leverage other's mission-critical networks before accurate processes. Competently deliver multidisciplinary information before B2C intellectual capital.	Phosfluorescently embrace sticky outsourcing without cross-unit customer service.</description>
+		<type>ADMISSIONS</type>
+		<input_type>INTEGER</input_type>
+	</custom_field>
+</response>
+  `,
+  getAppeals: `
+  <?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<appeal>
+		<id>3009</id>
+		<name>Email Blast #1</name>
+		<campaign_id>53</campaign_id>
+		<appeal_medium_id>7</appeal_medium_id>
+		<appeal_medium_name>Email</appeal_medium_name>
+		<made_on>Mar 1, 2018</made_on>
+		<cost>100</cost>
+		<status>INACTIVE</status>
+	</appeal>
+	<appeal>
+		<id>3094</id>
+		<name>Cold call push</name>
+		<campaign_id>54</campaign_id>
+		<appeal_medium_id>8</appeal_medium_id>
+		<appeal_medium_name>Callcenter</appeal_medium_name>
+		<made_on>Jan 1, 2019</made_on>
+		<cost>600</cost>
+		<status>ACTIVE</status>
+	</appeal>
 </response>
   `,
   getAvailableRoles: `
