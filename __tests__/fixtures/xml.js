@@ -660,6 +660,23 @@ module.exports = {
 	</application>
 </response>
   `,
+  getAvailableRoles: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<role>
+		<id>1234</id>
+		<name>Academic Admin</name>
+	</role>
+	<role>
+		<id>12345</id>
+		<name>Admissions</name>
+	</role>
+	<role>
+		<id>123456</id>
+		<name>Advisor</name>
+	</role>
+</response>
+	`,
 	getAssignmentComments: `
 	<?xml version="1.0" encoding="UTF-8"?>
 <response>

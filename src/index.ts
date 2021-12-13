@@ -226,6 +226,10 @@ class PopuliConnection {
     }, 'comment');
   }
 
+  public async getAvailableRoles() {
+    return this.taskRequest('getAvailableRoles', {}, 'role');
+  }
+
   public async getCountries() {
     return (await this.taskRequest('getCountries', {}, 'countries')).country;
   }

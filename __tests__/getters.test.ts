@@ -165,6 +165,21 @@ describe('gets assignment comments', () => {
   });
 });
 
+describe('gets available roles', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getAvailableRoles
+    );
+  });
+
+  test('getAvailableRoles()', async () => {
+    const availableRoles = 
+      await pc.getAvailableRoles()
+    ;
+    expect(availableRoles).toHaveLength(3);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(
