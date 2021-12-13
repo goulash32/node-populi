@@ -11,6 +11,7 @@ import {
   PopuliError,
   CustomFieldsType,
   GetApplicationFieldOptionsParams,
+  GetApplicationsParams,
 } from './types';
 
 type PopuliConnectionInfo = {
@@ -189,6 +190,32 @@ class PopuliConnection {
         show_online_only: showOnlineOnly,
       },
       'application_template'
+    );
+  }
+
+  public async getApplications(
+    applicationTemplateId: PopuliID,
+    params?: GetApplicationsParams
+  ) {
+    return this.taskRequest(
+      'getApplications',
+      {
+        application_template_id: applicationTemplateId,
+        date_field: params?.dateField,
+        start_date: params?.startDate
+          ? toPopuliDate(params.startDate)
+          : undefined,
+        end_date: params?.endDate ? toPopuliDate(params.endDate) : undefined,
+        term_id: params?.termId,
+        program_id: params?.programId,
+        degree_id: params?.degreeId,
+        specialization_id: params?.specializationId,
+        lead_active: params?.leadActive
+          ? toPopuliBoolean(params.leadActive)
+          : undefined,
+        offset: params?.offset,
+      },
+      'application'
     );
   }
 

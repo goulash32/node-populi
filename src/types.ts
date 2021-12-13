@@ -58,3 +58,28 @@ export type GetApplicationFieldOptionsParams = {
   country?: string;
   degreeId?: PopuliID;
 };
+
+export type ApplicationStatusType =
+  | 'IN_PROGRESS'
+  | 'SUBMITTED'
+  | 'PENDING_DECISION'
+  | 'ACCEPTED'
+  | 'DECLINED'
+  | 'WITHDRAWN'
+  | 'DEFERRED'
+  | 'WAITLISTED';
+
+export type DateFieldType = 'APPLIED' | 'DECISION' | 'SUBMITTED' | 'WITHDRAWN';
+
+export type GetApplicationsParams = {
+  status?: ApplicationStatusType;
+  dateField?: DateFieldType;
+  startDate?: Date;
+  endDate?: Date;
+  termId?: PopuliID;
+  programId?: PopuliID;
+  degreeId?: PopuliID;
+  specializationId?: PopuliID;
+  leadActive?: boolean;
+  offset?: number;
+};
