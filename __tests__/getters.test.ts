@@ -150,6 +150,21 @@ describe('gets applications', () => {
   });
 });
 
+describe('gets assignment comments', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getAssignmentComments
+    );
+  });
+
+  test('getApplications()', async () => {
+    const assignmentComments = 
+      await pc.getAssignmentComments(/* assignmentId */ 54321, /* personId */ 12345)
+    ;
+    expect(assignmentComments).toHaveLength(2);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(

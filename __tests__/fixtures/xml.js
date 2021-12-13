@@ -660,6 +660,31 @@ module.exports = {
 	</application>
 </response>
   `,
+	getAssignmentComments: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<comment>
+		<id>39174392</id>
+		<comment></comment>
+		<file_id>63372577</file_id>
+		<file_name>final_draft_v2.pages</file_name>
+		<internal>0</internal>
+		<added_at>2020-04-02 15:56:29</added_at>
+		<added_by_id>168742</added_by_id>
+		<added_by_name>Simon Student</added_by_name>
+	</comment>
+	<comment>
+		<id>39174399</id>
+		<comment>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</comment>
+		<file_id></file_id>
+		<file_name></file_name>
+		<internal>1</internal>
+		<added_at>2020-04-02 13:30:03</added_at>
+		<added_by_id>17628</added_by_id>
+		<added_by_name>Robert McProfessor</added_by_name>
+	</comment>
+</response>
+	`,
   getTermStudents: `<?xml version="1.0" encoding="UTF-8"?>
   <response num_results="265">
     <student>

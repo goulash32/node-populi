@@ -219,6 +219,13 @@ class PopuliConnection {
     );
   }
 
+  public async getAssignmentComments(assignmentId: PopuliID, personId: PopuliID) {
+    return this.taskRequest('getAssignmentComments', {
+      assignment_id: assignmentId,
+      person_id: personId
+    }, 'comment');
+  }
+
   public async getCountries() {
     return (await this.taskRequest('getCountries', {}, 'countries')).country;
   }
