@@ -119,7 +119,7 @@ module.exports = {
 	</aid_application>
 </response>
   `,
-	getApplication: `
+  getApplication: `
   <?xml version="1.0" encoding="UTF-8"?>
 <response>
 	<application>
@@ -660,24 +660,7 @@ module.exports = {
 	</appeal>
 </response>
   `,
-  getAvailableRoles: `
-	<?xml version="1.0" encoding="UTF-8"?>
-<response>
-	<role>
-		<id>1234</id>
-		<name>Academic Admin</name>
-	</role>
-	<role>
-		<id>12345</id>
-		<name>Admissions</name>
-	</role>
-	<role>
-		<id>123456</id>
-		<name>Advisor</name>
-	</role>
-</response>
-	`,
-	getAssignmentComments: `
+  getAssignmentComments: `
 	<?xml version="1.0" encoding="UTF-8"?>
 <response>
 	<comment>
@@ -700,6 +683,23 @@ module.exports = {
 		<added_by_id>17628</added_by_id>
 		<added_by_name>Robert McProfessor</added_by_name>
 	</comment>
+</response>
+	`,
+  getAvailableRoles: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<role>
+		<id>1234</id>
+		<name>Academic Admin</name>
+	</role>
+	<role>
+		<id>12345</id>
+		<name>Admissions</name>
+	</role>
+	<role>
+		<id>123456</id>
+		<name>Advisor</name>
+	</role>
 </response>
 	`,
   getCOACategories: `
