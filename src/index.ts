@@ -215,7 +215,8 @@ class PopuliConnection {
           : undefined,
         offset: params?.offset,
       },
-      'application'
+      'application',
+      true
     );
   }
 
@@ -234,15 +235,17 @@ class PopuliConnection {
   }
 
   public async getAvailableRoles() {
-    return this.taskRequest('getAvailableRoles', {}, 'role');
+    return this.taskRequest('getAvailableRoles', {}, 'role', true);
   }
 
   public async getCOACategories() {
-    return this.taskRequest('getCOACategories', {}, 'coa_category');
+    return this.taskRequest('getCOACategories', {}, 'coa_category', true);
   }
 
   public async getCampaigns() {
-    return this.taskRequest('getCampaigns', {}, 'campaign');
+    return this.taskRequest('getCampaigns', {}, 'campaign', true);
+  }
+
   }
 
   public async getCountries() {
@@ -253,7 +256,8 @@ class PopuliConnection {
     return this.taskRequest(
       'getCourseCatalog',
       { include_retired: includeRetired },
-      'course'
+      'course',
+      true
     );
   }
 
@@ -349,9 +353,10 @@ class PopuliConnection {
   private async taskRequest(
     taskName: string,
     args?: any,
-    listElementName?: string
+    listElementName?: string,
+    forceTopLevelArray?: boolean
   ) {
-    const taskResult = await this._populiConnectionImpl.taskRequest(
+    let taskResult = await this._populiConnectionImpl.taskRequest(
       this._connectionInfo.schoolUrl,
       this._connectionInfo.accessKey,
       taskName,
@@ -360,7 +365,11 @@ class PopuliConnection {
     );
 
     if (listElementName) {
-      return this.retrieveElement(taskResult, listElementName);
+      taskResult = this.retrieveElement(taskResult, listElementName);
+    }
+
+    if (forceTopLevelArray && !Array.isArray(taskResult)) {
+      return [taskResult];
     }
 
     return taskResult;
