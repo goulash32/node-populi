@@ -157,7 +157,7 @@ describe('gets assignment comments', () => {
     );
   });
 
-  test('getApplications()', async () => {
+  test('getAssignmentComments()', async () => {
     const assignmentComments = 
       await pc.getAssignmentComments(/* assignmentId */ 54321, /* personId */ 12345)
     ;
