@@ -2,6 +2,8 @@ import fetch from 'node-fetch';
 import xml2js from 'xml2js';
 import camelCase from 'camelcase';
 
+import {toPopuliBoolean, toPopuliDate} from './helpers';
+
 import {
   PopuliID,
   Address,
@@ -321,17 +323,6 @@ class PopuliConnection {
     if (this._resultOptions.camelCase) return camelCase(text);
 
     return text;
-  }
-
-  private toPopuliDate(date: Date) {
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-  }
-
-  private toPopuliBoolean(value: boolean): number {
-    return value ? 1 : 0;
   }
 
   private _populiConnectionImpl: PopuliConnectionImpl;
