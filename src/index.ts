@@ -246,6 +246,17 @@ class PopuliConnection {
     return this.taskRequest('getCampaigns', {}, 'campaign', true);
   }
 
+  public async getCampusLifeRooms(academicTermId: PopuliID) {
+    return this.taskRequest(
+      'getCampusLifeRooms',
+      {
+        academic_term_id: academicTermId,
+      },
+      'room',
+      true
+    );
+  }
+
   }
 
   public async getCountries() {

@@ -736,6 +736,45 @@ module.exports = {
 	</campaign>
 </response>
 	`,
+  getCampusLifeRooms: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<room>
+		<room_plan_id>52</room_plan_id>
+		<room_plan_name>Dorm</room_plan_name>
+		<building_id>26</building_id>
+		<building_name>Complex A</building_name>
+		<room_id>256</room_id>
+		<room_name>Room 204</room_name>
+		<capacity_used>2</capacity_used>
+		<capacity>2</capacity>
+		<available>0</available>
+		<occupant>
+			<person_id>21435</person_id>
+			<person_name>Ben Smith</person_name>
+		</occupant>
+		<occupant>
+			<person_id>54987</person_id>
+			<person_name>Robert Jones</person_name>
+		</occupant>
+	</room>
+	<room>
+		<room_plan_id>52</room_plan_id>
+		<room_plan_name>Dorm</room_plan_name>
+		<building_id>87468</building_id>
+		<building_name>Complex E</building_name>
+		<room_id>54687</room_id>
+		<room_name>Room 134</room_name>
+		<capacity_used>1</capacity_used>
+		<capacity>2</capacity>
+		<available>1</available>
+		<occupant>
+			<person_id>9216473</person_id>
+			<person_name>Sally Smith</person_name>
+		</occupant>
+	</room>
+</response>
+	`,
   getTermStudents: `<?xml version="1.0" encoding="UTF-8"?>
   <response num_results="265">
     <student>

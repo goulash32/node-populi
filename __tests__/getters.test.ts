@@ -205,6 +205,19 @@ describe('gets campaigns', () => {
   });
 });
 
+describe('gets campus life rooms', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getCampusLifeRooms
+    );
+  });
+
+  test('getCampusLifeRooms()', async () => {
+    const rooms = await pc.getCampusLifeRooms(12345);
+    expect(rooms).toHaveLength(2);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(
