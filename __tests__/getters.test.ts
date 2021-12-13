@@ -158,9 +158,10 @@ describe('gets assignment comments', () => {
   });
 
   test('getAssignmentComments()', async () => {
-    const assignmentComments = 
-      await pc.getAssignmentComments(/* assignmentId */ 54321, /* personId */ 12345)
-    ;
+    const assignmentComments = await pc.getAssignmentComments(
+      /* assignmentId */ 54321,
+      /* personId */ 12345
+    );
     expect(assignmentComments).toHaveLength(2);
   });
 });
@@ -173,9 +174,7 @@ describe('gets available roles', () => {
   });
 
   test('getAvailableRoles()', async () => {
-    const availableRoles = 
-      await pc.getAvailableRoles()
-    ;
+    const availableRoles = await pc.getAvailableRoles();
     expect(availableRoles).toHaveLength(3);
   });
 });
