@@ -192,6 +192,19 @@ describe('gets COA categories', () => {
   });
 });
 
+describe('gets campaigns', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getCampaigns
+    );
+  });
+
+  test('getCampaigns()', async () => {
+    const campaigns = await pc.getCampaigns();
+    expect(campaigns).toHaveLength(2);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(

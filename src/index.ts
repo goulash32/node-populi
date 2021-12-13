@@ -241,6 +241,10 @@ class PopuliConnection {
     return this.taskRequest('getCOACategories', {}, 'coa_category');
   }
 
+  public async getCampaigns() {
+    return this.taskRequest('getCampaigns', {}, 'campaign');
+  }
+
   public async getCountries() {
     return (await this.taskRequest('getCountries', {}, 'countries')).country;
   }

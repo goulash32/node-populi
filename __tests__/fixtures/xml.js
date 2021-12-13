@@ -717,6 +717,25 @@ module.exports = {
 	</coa_category>
 </response>
 	`,
+  getCampaigns: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<campaign>
+		<id>2277</id>
+		<name>Annual Giving</name>
+		<goal></goal>
+		<deadline>0</deadline>
+		<status>ACTIVE</status>
+	</campaign>
+	<campaign>
+		<id>2289</id>
+		<name>Homecoming Weekend Events</name>
+		<goal>150000</goal>
+		<deadline>Oct 30, 2020 12:00am</deadline>
+		<status>INACTIVE</status>
+	</campaign>
+</response>
+	`,
   getTermStudents: `<?xml version="1.0" encoding="UTF-8"?>
   <response num_results="265">
     <student>
