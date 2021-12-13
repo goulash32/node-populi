@@ -702,6 +702,21 @@ module.exports = {
 	</comment>
 </response>
 	`,
+  getCOACategories: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<coa_category>
+		<id>18794687</id>
+		<name>Books and Supplies</name>
+		<type>BOOKS_AND_SUPPLIES</type>
+	</coa_category>
+	<coa_category>
+		<id>15975463</id>
+		<name>Tuition</name>
+		<type>TUITION</type>
+	</coa_category>
+</response>
+	`,
   getTermStudents: `<?xml version="1.0" encoding="UTF-8"?>
   <response num_results="265">
     <student>

@@ -179,6 +179,19 @@ describe('gets available roles', () => {
   });
 });
 
+describe('gets COA categories', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getCOACategories
+    );
+  });
+
+  test('getCOACategories()', async () => {
+    const availableRoles = await pc.getCOACategories();
+    expect(availableRoles).toHaveLength(2);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(
