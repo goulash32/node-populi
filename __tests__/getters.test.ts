@@ -244,6 +244,19 @@ describe('gets catalog course by id', () => {
   });
 });
 
+describe('get communication plans', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getCommunicationPlans
+    );
+  });
+
+  test('getCommunicationPlans()', async () => {
+    const communicationPlans = await pc.getCommunicationPlans();
+    expect(communicationPlans).toHaveLength(1);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(

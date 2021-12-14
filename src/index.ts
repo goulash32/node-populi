@@ -267,6 +267,15 @@ class PopuliConnection {
     });
   }
 
+  public async getCommunicationPlans() {
+    return this.taskRequest(
+      'getCommunicationPlans',
+      {},
+      'communication_plan',
+      true
+    );
+  }
+
   public async getCountries() {
     return (await this.taskRequest('getCountries', {}, 'countries')).country;
   }

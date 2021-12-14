@@ -868,6 +868,17 @@ module.exports = {
 	</corequisites>
 </response>
 	`,
+  getCommunicationPlans: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<communication_plan>
+		<id>13</id>
+		<name>Leads Communication Plan</name>
+		<added_by>3093</added_by>
+		<added_at>2017-02-08 22:09:27</added_at>
+	</communication_plan>
+</response>
+	`,
   getTermStudents: `<?xml version="1.0" encoding="UTF-8"?>
   <response num_results="265">
     <student>
