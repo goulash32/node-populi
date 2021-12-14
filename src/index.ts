@@ -506,7 +506,10 @@ class PopuliConnection {
     }
 
     if (forceTopLevelArray && !Array.isArray(taskResult)) {
-      return [taskResult];
+      /**  Necessary check so that an empty result returns []
+           instead of [ undefined ] (an array with a single undefined element) */
+      if (taskResult) return [taskResult];
+      else return [];
     }
 
     return taskResult;
