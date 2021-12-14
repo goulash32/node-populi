@@ -106,10 +106,22 @@ class PopuliConnection {
     });
   }
 
+  /**
+   * Adds an address to a person.
+   * @param personId The ID of the person to add an address for.
+   * @param address The address to add.
+   * @returns A Promise that resolves to the ID of the address.
+   */
   public async addPersonAddress(personId: PopuliID, address: Address) {
     return this.addAddress(true, personId, address);
   }
 
+  /**
+   * Adds an address to an organization.
+   * @param organizationId The ID of the organization to add an address for.
+   * @param address The address to add.
+   * @returns A Promise that resolves to the ID of the address.
+   */
   public async addOrganizationAddress(
     organizationId: PopuliID,
     address: Address
@@ -117,10 +129,19 @@ class PopuliConnection {
     return this.addAddress(false, organizationId, address);
   }
 
+  /**
+   * Returns all academic years.
+   * @returns A Promise that resolves to an array of academic year records.
+   */
   public async getAcademicYears() {
     return this.taskRequest('getAcademicYears', {}, 'academic_year');
   }
 
+  /**
+   * Returns a particular financial aid application (each student can have one per aid year).
+   * @param aidApplicationId The ID of the aid application.
+   * @returns A Promise that resolves to an individual aid application.
+   */
   public async getAidApplication(aidApplicationId: PopuliID) {
     return this.taskRequest(
       'getAidApplication',
@@ -129,6 +150,12 @@ class PopuliConnection {
     );
   }
 
+  /**
+   * Returns a particular financial aid application (each student can have one per aid year).
+   * @param aidApplicationId The ID of the aid application.
+   * @param aidYearId The ID of the aid year.
+   * @returns A Promise that resolves to an individual aid application.
+   */
   public async getAidApplicationForStudentAidYear(
     aidApplicationId: PopuliID,
     aidYearId: PopuliID
@@ -140,14 +167,19 @@ class PopuliConnection {
     );
   }
 
-  public async getAcademicTerms() {
-    return this.taskRequest('getAcademicTerms', {}, 'academic_term');
-  }
-
+  /**
+   * Returns all information related to donation appeals configured for your institution.
+   * @returns A Promise that resolves to an array of donation appeals.
+   */
   public async getAppeals() {
     return this.taskRequest('getAppeals', {}, 'appeal');
   }
 
+  /**
+   * Returns an application.
+   * @param applicationId The ID of the application.
+   * @returns A Promise that resolves to an application.
+   */
   public async getApplication(applicationId: PopuliID) {
     return this.taskRequest(
       'getApplication',
@@ -156,6 +188,14 @@ class PopuliConnection {
     );
   }
 
+  /**
+   * Returns the options for an application field.
+   *
+   * _Note: Only application fields with a `data_type` of `CHOICE` or `MULTIPLE_ANSWER` will return options._
+   * @param applicationFieldId The ID of the application field.
+   * @param params Parameters to further filter the result.
+   * @returns A Promise that resolves to an array of options for the requested application field.
+   */
   public async getApplicationFieldOptions(
     applicationFieldId: PopuliID,
     params?: GetApplicationFieldOptionsParams
@@ -173,6 +213,11 @@ class PopuliConnection {
     return fieldOptions.option;
   }
 
+  /**
+   * Returns all application fields for a particular application.
+   * @param applicationId The ID of the application.
+   * @returns A Promise that resolves to an array of fields for the requested application.
+   */
   public async getApplicationFields(applicationId: PopuliID) {
     return this.taskRequest(
       'getApplicationFields',
@@ -183,6 +228,11 @@ class PopuliConnection {
     );
   }
 
+  /**
+   * Returns all application templates.
+   * @param showOnlineOnly If `true` only application templates that are set to show online will be returned. Defaults to `false`.
+   * @returns A Promise that resolves to an array of application templates.
+   */
   public async getApplicationTemplates(showOnlineOnly: boolean = false) {
     return this.taskRequest(
       'getApplicationTemplates',
@@ -193,6 +243,12 @@ class PopuliConnection {
     );
   }
 
+  /**
+   * Returns applications based on the filter conditions.
+   * @param applicationTemplateId The ID of the application template.
+   * @param params Conditions for filtering the returned applications.
+   * @returns A Promise that resolves to an array of applications.
+   */
   public async getApplications(
     applicationTemplateId: PopuliID,
     params?: GetApplicationsParams

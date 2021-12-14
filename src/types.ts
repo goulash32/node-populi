@@ -14,6 +14,10 @@ export class PopuliError extends Error {
 
 export type PopuliID = string | number;
 
+/**
+ * The type of an address.
+ * @enum
+ */
 type AddressType =
   | 'HOME'
   | 'WORK'
@@ -23,6 +27,9 @@ type AddressType =
   | 'OTHER'
   | 'MAIN';
 
+/**
+ * @param street The street name
+ */
 export type Address = {
   street: string;
   city: string;
