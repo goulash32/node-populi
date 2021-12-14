@@ -284,6 +284,12 @@ class PopuliConnection {
     );
   }
 
+  /**
+   * Returns assignment comments for a particular assignment and person.
+   * @param assignmentId The ID of the assignment.
+   * @param personId The ID of the person.
+   * @returns A Promise that resolves to an array of assignment comments.
+   */
   public async getAssignmentComments(
     assignmentId: PopuliID,
     personId: PopuliID
@@ -298,18 +304,35 @@ class PopuliConnection {
     );
   }
 
+  /**
+   * Returns all the roles in Populi (Student, Staff, Admissions, etc).
+   * @returns A Promise that resolves to an array of roles.
+   */
   public async getAvailableRoles() {
     return this.taskRequest('getAvailableRoles', {}, 'role', true);
   }
 
+  /**
+   * Returns all financial aid COA categories.
+   * @returns A Promise that resolves to an array of financial aid COA categories.
+   */
   public async getCOACategories() {
     return this.taskRequest('getCOACategories', {}, 'coa_category', true);
   }
 
+  /**
+   * Returns all information related to donation campaigns configured for your institution.
+   * @returns A Promise that resolves to an array of donation campaigns.
+   */
   public async getCampaigns() {
     return this.taskRequest('getCampaigns', {}, 'campaign', true);
   }
 
+  /**
+   * Returns campus life rooms configured for an academic term.
+   * @param academicTermId The ID of the academic term.
+   * @returns A Promise that resolves to an array of campus life rooms.
+   */
   public async getCampusLifeRooms(academicTermId: PopuliID) {
     return this.taskRequest(
       'getCampusLifeRooms',
@@ -321,16 +344,29 @@ class PopuliConnection {
     );
   }
 
+  /**
+   * Returns all campuses.
+   * @returns A Promise that resolves to an array of campuses.
+   */
   public async getCampuses() {
     return this.taskRequest('getCampuses', {}, 'campus', true);
   }
 
+  /**
+   * Returns a catalog course and all of its equivalencies, prerequisites, corequisites, etc.
+   * @param catalogCourseId The ID of the catalog course.
+   * @returns A Promise that resolves to a catalog course.
+   */
   public async getCatalogCourse(catalogCourseId: PopuliID) {
     return this.taskRequest('getCatalogCourse', {
       catalog_course_id: catalogCourseId,
     });
   }
 
+  /**
+   * Returns all available communication plans.
+   * @returns A Promise that resolves to an array of communication plans.
+   */
   public async getCommunicationPlans() {
     return this.taskRequest(
       'getCommunicationPlans',
