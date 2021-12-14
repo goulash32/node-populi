@@ -130,6 +130,14 @@ class PopuliConnection {
   }
 
   /**
+   * Returns all academic terms.
+   * @returns A Promise that resolves to an array of academic terms records.
+   */
+  public async getAcademicTerms() {
+    return this.taskRequest('getAcademicTerms', {}, 'academic_term');
+  }
+
+  /**
    * Returns all academic years.
    * @returns A Promise that resolves to an array of academic year records.
    */
