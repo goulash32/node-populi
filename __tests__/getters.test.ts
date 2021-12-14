@@ -142,9 +142,9 @@ describe('gets applications', () => {
   test('getApplications()', async () => {
     /** Note: until xml2js can explicitly coerce single elements into an array,
      * the workaround is to do so manually */
-    const applications = [
-      await pc.getApplications(/* applicationTemplateId */ 112),
-    ];
+    const applications = await pc.getApplications(
+      /* applicationTemplateId */ 112
+    );
     expect(applications).toHaveLength(1);
     expect(applications[0].applicationTemplateId).toBe(112);
   });
