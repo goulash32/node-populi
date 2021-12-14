@@ -879,6 +879,39 @@ module.exports = {
 	</communication_plan>
 </response>
 	`,
+  getCourseInstanceAssignmentGroups: `
+	<?xml version="1.0" encoding="UTF-8"?>
+<response>
+	<assignment_group>
+		<groupid>7777</groupid>
+		<name>Quizzes</name>
+		<weight_percent>10</weight_percent>
+		<extra_credit>0</extra_credit>
+		<drop_lowest>0</drop_lowest>
+	</assignment_group>
+	<assignment_group>
+		<groupid>4444</groupid>
+		<name>Tests</name>
+		<weight_percent>60</weight_percent>
+		<extra_credit>0</extra_credit>
+		<drop_lowest>0</drop_lowest>
+	</assignment_group>
+	<assignment_group>
+		<groupid>3333</groupid>
+		<name>Participation</name>
+		<weight_percent>30</weight_percent>
+		<extra_credit>0</extra_credit>
+		<drop_lowest>0</drop_lowest>
+	</assignment_group>
+	<assignment_group>
+		<groupid>0</groupid>
+		<name>Other</name>
+		<weight_percent>0</weight_percent>
+		<extra_credit>0</extra_credit>
+		<drop_lowest>0</drop_lowest>
+	</assignment_group>
+</response>
+	`,
   getTermStudents: `<?xml version="1.0" encoding="UTF-8"?>
   <response num_results="265">
     <student>

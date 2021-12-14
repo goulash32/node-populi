@@ -257,6 +257,19 @@ describe('get communication plans', () => {
   });
 });
 
+describe('get course instance assignment groups', () => {
+  beforeEach(() => {
+    require('node-fetch').__setResultBody(
+      require('./fixtures/xml').getCourseInstanceAssignmentGroups
+    );
+  });
+
+  test('getCourseInstanceAssignmentGroups()', async () => {
+    const assignmentGroups = await pc.getCourseInstanceAssignmentGroups();
+    expect(assignmentGroups).toHaveLength(4);
+  });
+});
+
 describe('gets all custom fields', () => {
   beforeEach(() => {
     require('node-fetch').__setResultBody(

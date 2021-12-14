@@ -330,6 +330,15 @@ class PopuliConnection {
     );
   }
 
+  public async getCourseInstanceAssignmentGroups(instanceId: PopuliID) {
+    return this.taskRequest(
+      'getCourseInstanceAssignmentGroups',
+      { instance_id: instanceId },
+      'assignment_group',
+      true
+    );
+  }
+
   public async getTermStudents(
     termId?: PopuliID,
     params?: GetTermStudentsParams
