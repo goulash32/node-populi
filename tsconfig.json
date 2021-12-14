@@ -8,5 +8,8 @@
     "declaration": true,
   },
   "include": ["src/index.ts"],
-  "compileOnSave": true
+  "compileOnSave": true,
+  "typedocOptions": {
+    "excludePrivate": true
+  }
 }
